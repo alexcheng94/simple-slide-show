@@ -46,12 +46,26 @@ img{
 	height: 10px;
 	display: inline-block;
 	border-radius: 50%;
+	transition: background-color 0.4s ease;
 }
 .active{
 	background-color: #028FD5;
 }
+/*fading animation*/
 .slide{
 	display: none;
+	-webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 0.6s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
 .showing{
 	display: block;
